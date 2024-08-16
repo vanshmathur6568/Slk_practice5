@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Flowers School</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.jpg" alt="School Logo">
+        </div>
+        <div id="student-name" style="color: white; margin-left: 20px; display: none;"></div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#" id="login-page-link">Login</a></li>
+                <li><a href="#" id="register-page-link">Register</a></li>
+                <li><a href="#" id="welcome-page-link" style="display: none;">Welcome</a></li>
+                <li><a href="#" id="profile-page-link" style="display: none;">Student Profile</a></li>
+                <li><a href="#" id="timetable-page-link" style="display: none;">TimeTable</a></li>
+                <li><a href="#" id="activity-page-link" style="display: none;">Monthly Activity</a></li>
+                <li><a href="#" id="extra-activity-page-link" style="display: none;">Extra Activity</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Login Page -->
+        <section id="login-page">
+            <h1>Login</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </section>
+
+        <!-- Register Page -->
+        <section id="register-page" style="display: none;">
+            <h1>Register</h1>
+            <form id="register-form">
+                <input type="text" id="new-username" placeholder="Username" required><br>
+                <input type="password" id="new-password" placeholder="Password" required><br>
+                <button type="button" onclick="register()">Register</button>
+            </form>
+        </section>
+
+        <!-- Welcome Page -->
+        <section id="welcome-page" style="display: none;">
+            <h1>Welcome to Spring Flowers School</h1>
+            <p>We are delighted to have you here. Explore your profile and more!</p>
+            <button onclick="showActivityPage()">Monthly Chart</button>
+            <button onclick="showExtraActivityPage()">Extra Activity</button>
+            <div id="extra-activities-list"></div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile-page" style="display: none;">
+            <h1>Student Profile</h1>
+            <img src="./student.jpg" alt="Student Photo" width="300" height="300">
+            <p id="student-info"></p>
+        </section>
+
+        <!-- TimeTable Page -->
+        <section id="timetable-page" style="display: none;">
+            <h1>Your Time Table</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>9:00 - 10:00</td>
+                        <td>Hindi</td>
+                        <td>Hindi</td>
+                        <td>Hindi</td>
+                        <td>Hindi</td>
+                        <td>Hindi</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 10:45</td>
+                        <td>Sanskrit</td>
+                        <td>Sanskrit</td>
+                        <td>Sanskrit</td>
+                        <td>Sanskrit</td>
+                        <td>Sanskrit</td>
+                    </tr>
+                    <tr>
+                        <td>10:45 - 11:30</td>
+                        <td>Math</td>
+                        <td>Math</td>
+                        <td>Math</td>
+                        <td>Math</td>
+                        <td>Math</td>
+                    </tr>
+                    <tr>
+                        <td>11:30 - 12:15</td>
+                        <td>Science</td>
+                        <td>Science</td>
+                        <td>Science</td>
+                        <td>Science</td>
+                        <td>Science</td>
+                    </tr>
+                    <tr>
+                        <td>12:15 - 1:00</td>
+                        <td>English</td>
+                        <td>English</td>
+                        <td>English</td>
+                        <td>English</td>
+                        <td>English</td>
+                    </tr>
+                    <tr>
+                        <td>1:00 - 1:45</td>
+                        <td>History</td>
+                        <td>History</td>
+                        <td>History</td>
+                        <td>History</td>
+                        <td>History</td>
+                    </tr>
+                    <tr>
+                        <td>1:45 - 2:30</td>
+                        <td>Geography</td>
+                        <td>Geography</td>
+                        <td>Geography</td>
+                        <td>Geography</td>
+                        <td>Geography</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Monthly Activity Page -->
+        <section id="activity-page" style="display: none;">
+            <h1>Monthly Activity</h1>
+            <ul id="activity-list"></ul>
+        </section>
+
+        <!-- Extra Activity Page -->
+        <section id="extra-activity-page" style="display: none;">
+            <h1>Extra Activity</h1>
+            <form id="extra-activity-form">
+                <input type="date" id="activity-date" required><br>
+                <input type="text" id="extra-activity" placeholder="Activity Description" required><br>
+                <input type="text" id="activity-subject" placeholder="Subject" required><br>
+                <button type="button" onclick="submitExtraActivity()">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

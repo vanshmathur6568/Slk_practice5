@@ -1,0 +1,12 @@
+{
+    "users": [
+        { "username": "student1", "password": "password1" },
+        { "username": "student2", "password": "password2" }
+    ],
+    "Activities": [
+        { "id": 1, "activity": "Create Project File", "subject": "Maths" }
+    ],
+    "Extra_Activity": [
+        { "id": 1, "date": "12/12/2021", "activity": "Learned Chapter 12", "Subject": "Science" }
+    ]
+}
